@@ -15,6 +15,11 @@ steps:
       SourceFolder: '$(Build.ArtifactsDirectory)/win_build'
       TargetFolder: '$(System.DefaultWorkingDirectory)'
 
+  - task: CopyFiles@2
+    displayName: 'Copy SignList.xml Files'
+    inputs:
+      Contents: build/SignList.xml
+      TargetFolder: '$(build.artifactstagingdirectory)/nuget'
 
   - task: PowerShell@1
     displayName: 'Generate docs from docs repo'
