@@ -313,7 +313,7 @@ stages:
         - template: sign-artifacts/jobs/v2.yml@xamarin-templates
           parameters:
             targetFolder: $(Build.ArtifactStagingDirectory)/nuget/signed
-            name: Sign Phase
-          condition: and(succeeded(), ne(variables['signVmImage'], ''), or(eq(variables['Sign'], 'true'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'],'refs/tags/'))))
+            displayName: Sign Phase
+        condition: and(succeeded(), ne(variables['signVmImage'], ''), or(eq(variables['Sign'], 'true'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'],'refs/tags/'))))
 
 
