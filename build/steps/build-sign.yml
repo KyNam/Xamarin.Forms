@@ -12,7 +12,7 @@ steps:
   - checkout: none
     clean: true
   
-  - template: sign-artifacts/jobs/v2.yml@internal-templates
+  - template: sign-artifacts/jobs/v2.yml@xamarin-templates
     parameters:
       targetFolder: $(Build.ArtifactStagingDirectory)/nuget/signed
 
