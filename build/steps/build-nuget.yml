@@ -20,6 +20,7 @@ steps:
     inputs:
       Contents: build/SignList.xml
       TargetFolder: '$(build.artifactstagingdirectory)/nuget'
+      flattenFolders: true
 
   - task: PowerShell@1
     displayName: 'Generate docs from docs repo'
